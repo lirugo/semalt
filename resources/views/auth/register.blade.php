@@ -1,77 +1,51 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
+    <div class="row m-t-100">
+        <div class="col s4 offset-s4">
+            <div class="row">
+                <div class="card hoverable indigo">
+                    <div class="card-content white-text">
+                        <div class="row m-b-0">
+                            {!! Form::open(['route' => 'register', 'method' => 'POST']) !!}
+                            <span class="card-title center">Sign up</span>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                {!! Form::text('name', null, ['class' => 'validate', 'id' => 'name', 'pattern' => '.{3,}', 'autofocus']) !!}
+                                {!! Form::label('name', 'Enter Your Name') !!}
+                                <span class="helper-text" data-error="Minimum 3 chars" data-success="All is OK"></span>
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">email</i>
+                                {!! Form::email('email', null, ['class' => 'validate', 'id' => 'email', 'required']) !!}
+                                {!! Form::label('email', 'Enter Your Email') !!}
+                                <span class="helper-text" data-error="Email not correct" data-success="All is OK"></span>
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
+                            <div class="input-field col s12 m-b-30">
+                                <i class="material-icons prefix">vpn_key</i>
+                                {!! Form::password('password', ['class' => 'validate', 'id' => 'password', 'pattern' => '^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{6,}$', 'required']) !!}
+                                {!! Form::label('password', 'Enter Your Password') !!}
+                                <span class="helper-text" data-error="Minimum 6 chars at least 1 number and 1 capital letter" data-success="All is OK"></span>
                             </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            <div class="input-field col s12 m-b-30">
+                                <i class="material-icons prefix">vpn_key</i>
+                                {!! Form::password('password_confirmation', ['class' => 'validate', 'id' => 'password_confirmation', 'pattern' => '^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{6,}$', 'required']) !!}
+                                {!! Form::label('password_confirmation', 'Confirm Your Password') !!}
+                                <span class="helper-text" data-error="Minimum 6 chars at least 1 number and 1 capital letter" data-success="All is OK"></span>
                             </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                            <div class="col s12">
+                                <button class="btn waves-effect waves-light grey right" type="submit" name="action">Sign up
+                                    <i class="material-icons right">send</i>
                                 </button>
                             </div>
+                            {!! Form::close() !!}
                         </div>
-                    </form>
+                    </div>
+                    <div class="card-action">
+                        <a href="{{route('login')}}" class="grey-text">Sign in</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection

@@ -1,0 +1,26 @@
+
+<nav class="indigo">
+
+    <div class="nav-wrapper m-l-20 m-r-20">
+        <a href="#" class="brand-logo">Semalt</a>
+        @guest
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{route('login')}}">Sign in</a></li>
+                <li><a href="{{route('register')}}">Sign up</a></li>
+            </ul>
+        @else
+            <ul class="right hide-on-med-and-down">
+                <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+                <li>
+                    <a href="{{route('logout')}}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                        <i class="material-icons">exit_to_app</i>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: one;">
+                            {{ csrf_field() }}
+                        </form>
+                    </a>
+                </li>
+            </ul>
+        @endguest
+    </div>
+</nav>

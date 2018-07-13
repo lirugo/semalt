@@ -1,0 +1,10 @@
+body{
+  @extend .indigo, .darken-1;
+}
+a:hover{
+  @extend .blue-text;
+}
+
+input, select, textarea{
+  @extend .grey-text;
+}
