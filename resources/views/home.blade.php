@@ -115,7 +115,21 @@
             </div>
 
             {{--Part 2 Task1--}}
-            <div id="task2" class="col s12">task 2</div>
+            <div id="task2" class="col s12">
+                <div class="card white grey-text text-darken-1">
+                    <div class="card-content">
+                        <span class="card-title">Implement an algorithm for extracting numeric values from a string</span>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">format_align_justify</i>
+                            <input id="string" type="text" v-model="string" v-on:keyup="getNumbers">
+                            <label class="active" for="string">Enter string</label>
+                        </div>
+                        <p v-if="numbers != ''">@{{ numbers }}</p>
+                        <p v-else>There are no digits in the line.</p>
+                        <p class="right-align">For PHP can use function preg_match_all</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -123,19 +137,26 @@
 
 @section('scripts')
     <script>
+        // Vue
         var app = new Vue({
             el: '#app',
             data: {
                 action: '',
                 students: 28,
-                percent: 75
+                percent: 75,
+                string: 'This server has 386 GB RAM and 5000 GB storage',
+                numbers: '386,5000'
             },
-            method: {
-
+            methods: {
+                getNumbers: function(string){
+                    // Use regex
+                    this.numbers = this.string.replace(/\D+/ig, ',');
+                    this.numbers = this.numbers.slice(1);
+                }
             }
         });
 
-        //For tabs
+        // For tabs
         M.AutoInit();
     </script>
 @endsection
