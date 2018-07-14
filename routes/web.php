@@ -20,4 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // getUserWithHigherBids
-Route::get('/get', 'Events\EventsController@getUserWithHigherBids');
+Route::get('/getUserWithHigherBids', 'Events\EventsController@getUserWithHigherBids');
+Route::get('/getEventWithoutBids', 'Events\EventsController@getEventWithoutBids');

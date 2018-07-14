@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Events;
 
 use App\Bid;
+use App\Event;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
@@ -23,5 +24,22 @@ class EventsController extends Controller
 
         // Return name
         return $bid; // - Николай
+    }
+
+    public function getEventWithoutBids(){
+        // Use ORM
+        $events = Event::find(2);
+
+        // Pure MySQL - Get name
+        $events = DB::select("
+            SELECT events.caption
+            FROM events
+            LEFT JOIN bids
+            ON events.id = bids.id_event
+            WHERE bids.id_event IS NULL
+        ");
+
+        // Return events or event
+        return $events; // - Green Grey
     }
 }
