@@ -114,7 +114,7 @@
                 </div>
             </div>
 
-            {{--Part 2 Task1--}}
+            {{--Part 2 Task2--}}
             <div id="task2" class="col s12">
                 <div class="card white grey-text text-darken-1">
                     <div class="card-content">
@@ -127,6 +127,52 @@
                         <p v-if="numbers != ''">@{{ numbers }}</p>
                         <p v-else>There are no digits in the line.</p>
                         <p class="right-align">For PHP can use function preg_match_all</p>
+                    </div>
+                </div>
+            </div>
+
+            {{--Part 2 Task3--}}
+            <div id="task3" class="col s12">
+                <div class="card white grey-text text-darken-1">
+                    <div class="card-content">
+                        <span class="card-title">How to get the first element of an array - ​[2,3,56,65,56,44,34,45,3,5,35,345,3,5] ​?</span>
+                        <div class="row m-t-20">
+                            <div class="col s4">
+                                <div class="card grey light-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title">PHP</span>
+                                        <p>
+                                            array_shift($array)<br/>
+                                            $array[0]<br/>
+                                            ...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="card grey light-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title">JS</span>
+                                        <p>
+                                            array[0]<br/>
+                                            ...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="card grey light-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title">JAVA</span>
+                                        <p>
+                                            int[] array = {...}; (creating array)<br/>
+                                            array[0];<br/>
+                                            ...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
