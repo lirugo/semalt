@@ -272,6 +272,9 @@
                         <p>
                             === value|type checking<br/>
                             ==  value checking<br/>
+                            <br/>
+                            '45' == 45  // Result: bool(true)<br/>
+                            '45' === 45 // Result: bool(false)<br/>
                         </p>
                     </div>
                 </div>
@@ -354,10 +357,5 @@
 
         // For tabs
         M.AutoInit();
-        for( var i =0; i < 10; i++){
-            setTimeout(function () {
-                console.log(i);
-            }, 100);
-        }
     </script>
 @endsection
