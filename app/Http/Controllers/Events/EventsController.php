@@ -27,9 +27,6 @@ class EventsController extends Controller
     }
 
     public function getEventWithoutBids(){
-        // Use ORM
-        $events = Event::find(2);
-
         // Pure MySQL - Get name
         $events = DB::select("
             SELECT events.caption
