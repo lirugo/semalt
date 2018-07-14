@@ -84,7 +84,23 @@
                 </div>
             </div>
 
-
+            {{--Part 1 Task4--}}
+            <div id="task4" class="col s12">
+                <div class="card white grey-text text-darken-1">
+                    <div class="card-content">
+                        <span class="card-title">Write a query that selects the name of the event (events.caption), by event what have more three bids</span>
+                        <p><i><a href="{{url('/getEventWithMoreThreeBids')}}">Click me</a></i></p><br/>
+                        <p>
+                            SELECT events.caption, COUNT(*) as count<br/>
+                            FROM events<br/>
+                            LEFT JOIN bids<br/>
+                            ON bids.id_event = events.id<br/>
+                            GROUP BY events.id<br/>
+                            HAVING count > 3<br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
