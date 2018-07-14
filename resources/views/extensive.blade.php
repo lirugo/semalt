@@ -283,7 +283,7 @@
                         <span class="card-title">What user data of the site from the listed can be considered as 100% authentic: cookie|session|ip|user-agent</span>
                         <p class="flow-text">
                             This is a difficult question<br/>
-                            I think that none of these data can be considered 100% authentic.<br/>
+                            I think that none of these place can be considered 100% authentic.<br/>
                             But the most reliable in my opinion it's @session@ because it stores data on the server<br/>
                             And for user hard to write something in session storage
 
