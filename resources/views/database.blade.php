@@ -35,16 +35,24 @@
                 <div class="card white grey-text text-darken-1">
                     <div class="card-content">
                         <span class="card-title">Make scripts to prepare the database (migration)</span>
-                        <p>For more information look - <i>database/seeds/EventsSeeder.php|BidsSeeder.php</i></p><br/>
+                        <p>For more information look - <i>database/migrations/</i></p><br/>
                         <p>
-                            DB::table('events')->insert(['caption' => 'Atlas Weekend 2017',] );<br/>
-                            DB::table('events')->insert(['caption' => 'Green Grey',] );
+                            Schema::create('events', function (Blueprint $table) {<br/>
+                            $table->increments('id');<br/>
+                            $table->string('caption');<br/>
+                            $table->timestamps();<br/>
+                            });<br/>
                         </p>
                         <p>
-                            DB::table('bids')->insert(['id_event' => 1,'name' => 'Василий','email' => 'vas@gmail.com',
-                            'price' => '100',] );<br/>
-                            DB::table('bids')->insert(['id_event' => 1,'name' => 'Николай','email' => 'nk@gmail.com',
-                            'price' => '150',] );
+                            Schema::create('bids', function (Blueprint $table) {<br/>
+                            $table->increments('id');<br/>
+                            $table->integer('id_event')->unsigned();<br/>
+                            $table->foreign('id_event')->references('id')->on('events');<br/>
+                            $table->string('name');<br/>
+                            $table->string('email');<br/>
+                            $table->float('price');<br/>
+                            $table->timestamps();<br/>
+                            });<br/>
                         </p>
                     </div>
                 </div>

@@ -79,10 +79,7 @@
 
             <div class="content">
                 <div class="title">
-                    Hey, Semalt
-                </div>
-                <div class="title" style="font-size:1.5rem;">
-                    Tasks here
+                    Hey, Semalt!
                 </div>
             </div>
         </div>
