@@ -27,7 +27,7 @@ class EventsController extends Controller
     }
 
     public function getEventWithoutBids(){
-        // Pure MySQL - Get name
+        // Pure MySQL - Get event\s
         $events = DB::select("
             SELECT events.caption
             FROM events
@@ -38,5 +38,19 @@ class EventsController extends Controller
 
         // Return events or event
         return $events; // - Green Grey
+    }
+
+    public function getEventWithMoreThreeBids(){
+        // Pure MySQL - Get event\s
+        $events = DB::select("
+            SELECT events.caption, COUNT(*) as count
+            FROM events
+            LEFT JOIN bids
+            ON bids.id_event = events.id
+            GROUP BY events.id
+            HAVING count > 3
+        ");
+
+        return $events;
     }
 }
