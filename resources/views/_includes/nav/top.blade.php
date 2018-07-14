@@ -2,7 +2,7 @@
 <nav class="indigo">
 
     <div class="nav-wrapper m-l-20 m-r-20">
-        <a href="#" class="brand-logo">Semalt</a>
+        <a href="{{url('')}}" class="brand-logo">Semalt</a>
         @guest
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{route('login')}}">Sign in</a></li>

@@ -17,7 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/extensive', 'HomeController@extensive');
+Route::get('/database', 'HomeController@database');
 
 // getUserWithHigherBids
 Route::get('/getUserWithHigherBids', 'Events\EventsController@getUserWithHigherBids');

@@ -6,12 +6,7 @@
         {{--Parts tabs--}}
         <div class="row m-t-100">
             <div class="col s12">
-                <div class="card white">
-                    <ul class="tabs grey-text text-darken-1">
-                        <li class="tab col s6"><a href="#part1">{{__('Part 1 | Extensive')}}</a></li>
-                        <li class="tab col s6"><a href="#part2">{{__('Part 2 | DataBase')}}</a></li>
-                    </ul>
-                </div>
+                <a class="waves-effect indigo waves-light btn right" href="{{url('/database')}}"><i class="material-icons right">storage</i>Part 2 | DataBase</a>
             </div>
         </div>
 
@@ -33,22 +28,9 @@
                     </ul>
                 </div>
             </div>
-            {{--Part 2 tasks tabs--}}
-            <div class="col s12">
-                <div class="card white" id="part2">
-                    <ul class="tabs">
-                        <li class="tab col"><a href="#task1">{{__('Task 1')}}</a></li>
-                        <li class="tab col"><a href="#task2">{{__('Task 2')}}</a></li>
-                        <li class="tab col"><a href="#task3">{{__('Task 3')}}</a></li>
-                        <li class="tab col"><a href="#task4">{{__('Task 4')}}</a></li>
-                        <li class="tab col"><a href="#task5">{{__('Task 5')}}</a></li>
-                        <li class="tab col"><a href="#task6">{{__('Task 6')}}</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
-        {{--Solution part--}}
+        {{--Solution part 1--}}
         <div class="row">
             {{--Part 1 Task1--}}
             <div id="task1" class="col s12">
