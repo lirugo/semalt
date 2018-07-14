@@ -15,7 +15,7 @@ class BidsSeeder extends Seeder
             'id_event' => 1,
             'name' => 'Василий',
             'email' => 'vas@gmail.com',
-            'price' => '150',
+            'price' => '100',
         ] );
         DB::table('bids')->insert([
             'id_event' => 1,

@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// getUserWithHigherBids
+Route::get('/get', 'Events\EventsController@getUserWithHigherBids');
