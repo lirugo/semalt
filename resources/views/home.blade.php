@@ -114,7 +114,7 @@
                 </div>
             </div>
 
-            {{--Part 2 Task2--}}
+            {{--Part 1 Task2--}}
             <div id="task2" class="col s12">
                 <div class="card white grey-text text-darken-1">
                     <div class="card-content">
@@ -131,7 +131,7 @@
                 </div>
             </div>
 
-            {{--Part 2 Task3--}}
+            {{--Part 1 Task3--}}
             <div id="task3" class="col s12">
                 <div class="card white grey-text text-darken-1">
                     <div class="card-content">
@@ -167,6 +167,50 @@
                                         <p>
                                             int[] array = {...}; (creating array)<br/>
                                             array[0];<br/>
+                                            ...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{--Part 1 Task4--}}
+            <div id="task4" class="col s12">
+                <div class="card white grey-text text-darken-1">
+                    <div class="card-content">
+                        <span class="card-title">How to calculate the remainder of division 10/3 ?</span>
+                        <div class="row m-t-20">
+                            <div class="col s4">
+                                <div class="card grey light-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title">PHP</span>
+                                        <p>
+                                            $a % $b<br/>
+                                            ...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="card grey light-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title">JS</span>
+                                        <p>
+                                            a % b<br/>
+                                            ...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="card grey light-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title">JAVA</span>
+                                        <p>
+                                            a % b<br/>
                                             ...
                                         </p>
                                     </div>
