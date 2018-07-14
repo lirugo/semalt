@@ -220,6 +220,49 @@
                     </div>
                 </div>
             </div>
+
+            {{--Part 1 Task5--}}
+            <div id="task5" class="col s12">
+                <div class="card white grey-text text-darken-1">
+                    <div class="card-content">
+                        <span class="card-title">How to calculate the remainder of division 10/3 ?</span>
+                        <div class="row m-t-20">
+                            <div class="col s4">
+                                <div class="card grey light-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title">PHP</span>
+                                        <p>
+                                            list($a,$b)=[$b,$a];<br/>
+                                            ...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="card grey light-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title">JS</span>
+                                        <p>
+                                            b = [a, a = b][0];<br/>
+                                            ...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="card grey light-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title">JAVA</span>
+                                        <p>
+                                            ...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -248,5 +291,6 @@
 
         // For tabs
         M.AutoInit();
+
     </script>
 @endsection
