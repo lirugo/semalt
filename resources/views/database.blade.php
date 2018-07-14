@@ -48,6 +48,24 @@
                     </div>
                 </div>
             </div>
+
+            {{--Part 1 Task2--}}
+            <div id="task2" class="col s12">
+                <div class="card white grey-text text-darken-1">
+                    <div class="card-content">
+                        <span class="card-title">Write a query that selects the user name (bids.name) from the
+                            higher bid price (bids.price)</span>
+                        <p><i><a href="{{url('/getUserWithHigherBids')}}">Click me</a></i></p><br/>
+                        <p>
+                            SELECT name<br/>
+                            FROM bids<br/>
+                            ORDER BY price<br/>
+                            DESC LIMIT 1<br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 @endsection
