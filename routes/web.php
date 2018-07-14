@@ -23,3 +23,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/getUserWithHigherBids', 'Events\EventsController@getUserWithHigherBids');
 Route::get('/getEventWithoutBids', 'Events\EventsController@getEventWithoutBids');
 Route::get('/getEventWithMoreThreeBids', 'Events\EventsController@getEventWithMoreThreeBids');
+Route::get('/getEventWithMaxBid', 'Events\EventsController@getEventWithMaxBid');

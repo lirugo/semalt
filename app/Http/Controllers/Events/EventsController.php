@@ -51,6 +51,21 @@ class EventsController extends Controller
             HAVING count > 3
         ");
 
-        return $events;
+        return $events; // - []
+    }
+
+    public function getEventWithMaxBid(){
+        // Pure MySQL - Get event
+        $events = DB::select("
+            SELECT events.caption, COUNT(*) as count
+            FROM events
+            LEFT JOIN bids
+            ON bids.id_event = events.id
+            GROUP BY events.id
+            ORDER BY count DESC
+            LIMIT 1
+        ");
+
+        return $events; // Atlas Weekend 2017
     }
 }
