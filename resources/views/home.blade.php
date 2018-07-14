@@ -290,6 +290,42 @@
                     </div>
                 </div>
             </div>
+
+            {{--Part 1 Task8--}}
+            <div id="task8" class="col s12">
+                <div class="card white grey-text text-darken-1">
+                    <div class="card-content">
+                        <span class="card-title">What user data of the site from the listed can be considered as 100% authentic: cookie|session|ip|user-agent</span>
+                        <p class="flow-text">
+                            This is a difficult question<br/>
+                            I think that none of these data can be considered 100% authentic.<br/>
+                            But the most reliable in my opinion it's @session@ because it stores data on the server<br/>
+                            And for user hard to write something in session storage
+
+                        <p/>
+                    </div>
+                </div>
+            </div>
+
+            {{--Part 1 Task9--}}
+            <div id="task9" class="col s12">
+                <div class="card white grey-text text-darken-1">
+                    <div class="card-content">
+                        <span class="card-title">How it's work?</span>
+                        <p>
+                            for( var i =0; i < 10; i++){<br/>
+                                setTimeout(function () {<br/>
+                                console.log(i);<br/>
+                                }, 100);<br/>
+                            }<br/>
+                        </p>
+                        <p class="flow-text">
+                            Will show 10 times the number 10<br/>
+                            Because the cycle will reach the end faster than 100 ms
+                        <p/>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -318,6 +354,10 @@
 
         // For tabs
         M.AutoInit();
-
+        for( var i =0; i < 10; i++){
+            setTimeout(function () {
+                console.log(i);
+            }, 100);
+        }
     </script>
 @endsection
