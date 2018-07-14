@@ -1,3 +1,77 @@
+# Semalt project
+
+## HOW LOOK ? Just click [here](http://46.4.115.154:9696/)
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+```
+Git
+Composer
+Some LEMP|LAMP etc... with
+PHP 7.2+
+Mysql 5.7
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+Clone project
+```
+git clone https://github.com/lirugo/semalt.git
+```
+
+Install composer
+```
+composer install
+```
+
+Configure database - copy .env.example to .env and edit file
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=semalt
+DB_USERNAME=user
+DB_PASSWORD=password
+```
+
+Migrate database
+```
+php artisan migrate --seed
+```
+
+Generate key project
+```
+php artisan key:generate
+```
+
+Start PHP server
+```
+php artisan serve
+```
+
+Open your browser
+```
+http://localhost:8000
+```
+
+Default user
+```
+Email - admin@app.com
+Password - password1Q
+```
+
+## Built With
+
+* [Materilizecss](https://materializecss.com/)
+* [Vue.js](https://vuejs.org/)
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
