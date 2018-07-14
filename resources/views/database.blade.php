@@ -27,9 +27,9 @@
             </div>
         </div>
 
-        {{--Solution part 1--}}
+        {{--Solution part 2--}}
         <div class="row">
-            {{--Part 1 Task1--}}
+            {{--Part 2 Task1--}}
             <div id="task1" class="col s12">
                 <div class="card white grey-text text-darken-1">
                     <div class="card-content">
@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            {{--Part 1 Task2--}}
+            {{--Part 2 Task2--}}
             <div id="task2" class="col s12">
                 <div class="card white grey-text text-darken-1">
                     <div class="card-content">
@@ -65,6 +65,26 @@
                     </div>
                 </div>
             </div>
+
+            {{--Part 2 Task3--}}
+            <div id="task3" class="col s12">
+                <div class="card white grey-text text-darken-1">
+                    <div class="card-content">
+                        <span class="card-title">Write a query that selects the name of the event (events.caption), by event what not have bids?</span>
+                            <p><i><a href="{{url('/getEventWithoutBids')}}">Click me</a></i></p><br/>
+                            <p>
+                                SELECT events.caption<br/>
+                                FROM events<br/>
+                                LEFT JOIN bids<br/>
+                                ON events.id = bids.id_event<br/>
+                                WHERE bids.id_event IS NULL<br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 
         </div>
     </div>
