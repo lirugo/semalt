@@ -276,6 +276,20 @@
                     </div>
                 </div>
             </div>
+
+            {{--Part 1 Task7--}}
+            <div id="task7" class="col s12">
+                <div class="card white grey-text text-darken-1">
+                    <div class="card-content">
+                        <span class="card-title">What is the difference require && include ?</span>
+                        <p class="flow-text">
+                            The require() function is identical to include(), except that it handles errors differently.
+                            If an error occurs, the include() function generates a warning, but the script will continue execution.
+                            The require() generates a fatal error, and the script will stop. <a href="https://stackoverflow.com/questions/2418473/difference-between-require-include-require-once-and-include-once">[Read more]</a>
+                        <p/>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
